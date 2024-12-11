@@ -1,0 +1,121 @@
+item.stone_hammer.name=Stone Hammer
+item.copper_hammer.name=Copper Hammer
+item.bronze_hammer.name=Bronze Hammer
+item.iron_hammer.name=Iron Hammer
+item.steel_hammer.name=Steel Hammer
+item.copper_wrench.name=Copper Wrench
+item.bronze_wrench.name=Bronze Wrench
+item.iron_wrench.name=Iron Wrench
+item.steel_wrench.name=Steel Wrench
+item.copper_file.name=Copper File
+item.bronze_file.name=Bronze File
+item.iron_file.name=Iron File
+item.steel_file.name=Steel File
+
+item.rock.name=Rock
+item.granite_rock.name=Granite Rock
+item.diorite_rock.name=Diorite Rock
+item.andesite_rock.name=Andesite Rock
+item.sandstone_rock.name=Sandstone Rock
+item.prismarine_rock.name=Prismarine Rock
+item.nether_rock.name=Nether Rock
+item.end_rock.name=End Rock
+
+item.copper_ingot.name=Copper Ingot
+item.tin_ingot.name=Tin Ingot
+item.bronze_ingot.name=Bronze Ingot
+item.steel_ingot.name=Steel Ingot
+
+item.iron_plate.name=Iron Plate
+item.gold_plate.name=Gold Plate
+item.copper_plate.name=Copper Plate
+item.tin_plate.name=Tin Plate
+item.bronze_plate.name=Bronze Plate
+item.steel_plate.name=Steel Plate
+
+item.iron_dust.name=Iron Dust
+item.gold_dust.name=Gold Dust
+item.copper_dust.name=Copper Dust
+item.tin_dust.name=Tin Dust
+item.bronze_dust.name=Bronze Dust
+item.steel_dust.name=Steel Dust
+
+item.iron_rod.name=Iron Rod
+item.gold_rod.name=Gold Rod
+item.copper_rod.name=Copper Rod
+item.tin_rod.name=Tin Rod
+item.bronze_rod.name=Bronze Rod
+item.steel_rod.name=Steel Rod
+
+item.iron_rodlong.name=Iron Long Rod
+item.gold_rodlong.name=Gold Long Rod
+item.copper_rodlong.name=Copper Long Rod
+item.tin_rodlong.name=Tin Long Rod
+item.bronze_rodlong.name=Bronze Long Rod
+item.steel_rodlong.name=Steel Long Rod
+
+item.iron_gear.name=Iron Gear
+item.gold_gear.name=Gold Gear
+item.copper_gear.name=Copper Gear
+item.tin_gear.name=Tin Gear
+item.bronze_gear.name=Bronze Gear
+item.steel_gear.name=Steel Gear
+
+item.iron_ring.name=Iron Ring
+item.gold_ring.name=Gold Ring
+item.copper_ring.name=Copper Ring
+item.tin_ring.name=Tin Ring
+item.bronze_ring.name=Bronze Ring
+item.steel_ring.name=Steel Ring
+
+item.bronze_mixture.name=Bronze Mixture
+item.steel_mixture.name=Steel Mixture
+
+item.copper_pickaxe.name=Copper Pickaxe
+item.copper_hoe.name=Copper Hoe
+item.copper_axe.name=Copper Axe
+item.copper_shovel.name=Copper Shovel
+item.copper_sword.name=Copper Sword
+item.bronze_pickaxe.name=Bronze Pickaxe
+item.bronze_hoe.name=Bronze Hoe
+item.bronze_axe.name=Bronze Axe
+item.bronze_shovel.name=Bronze Shovel
+item.bronze_sword.name=Bronze Sword
+item.steel_pickaxe.name=Steel Pickaxe
+item.steel_hoe.name=Steel Hoe
+item.steel_axe.name=Steel Axe
+item.steel_shovel.name=Steel Shovel
+item.steel_sword.name=Steel Sword
+
+item.copper_apple.name=Copper Apple
+
+tile.copper_block.name=Block of Copper
+tile.tin_block.name=Block of Tin
+tile.bronze_block.name=Block of Bronze
+tile.steel_block.name=Block of Steel
+
+tile.copper_ore.name=Copper Ore
+tile.tin_ore.name=Tin Ore
+tile.nether_copper_ore.name=Nether Copper Ore
+tile.nether_tin_ore.name=Nether Tin Ore
+tile.end_copper_ore.name=End Copper Ore
+tile.end_tin_ore.name=End Tin Ore
+
+tile.granite_cobblestone.name=Granite Cobblestone
+tile.diorite_cobblestone.name=Diorite Cobblestone
+tile.andesite_cobblestone.name=Andesite Cobblestone
+tile.sandstone_cobblestone.name=Sandstone Cobblestone
+tile.prismarine_cobblestone.name=Prismarine Cobblestone
+tile.nether_cobblestone.name=Nether Cobblestone
+tile.end_cobblestone.name=End Cobblestone
+
+tile.bronze_casing.name=Bronze Machine Casing
+tile.iron_casing.name=Iron Machine Casing
+tile.steel_casing.name=Steel Machine Casing
+
+tile.ceramic_crucible.name=Ceramic Crucible
+tile.jmt0_steelmaker.name=Steelmaker (T0)
+tile.jmt0_steelmaker_lit.name=Steelmaker (Lit, T0)
+
+itemGroup.tabJapdahanItems=Japdahan Items
+itemGroup.tabJapdahanBlocks=Japdahan Blocks

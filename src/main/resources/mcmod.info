@@ -1,0 +1,16 @@
+[
+{
+  "modid": "japdahan",
+  "name": "Japdahan",
+  "description": "All in One",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["won-myee"],
+  "credits": "All credits to me!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

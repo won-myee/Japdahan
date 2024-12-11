@@ -1,0 +1,16 @@
+[ {
+  "material" : "iron",
+  "form" : "gear"
+}, {
+  "material" : "gold",
+  "form" : "gear"
+}, {
+  "material" : "copper",
+  "form" : "gear"
+}, {
+  "material" : "tin",
+  "form" : "gear"
+}, {
+  "material" : "bronze",
+  "form" : "gear"
+} ]
