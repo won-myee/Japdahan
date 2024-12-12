@@ -8,7 +8,7 @@ public class TabJapdahanBlocks extends CreativeTabs {
 
     public TabJapdahanBlocks(String label) {
         super(label);
-        this.setBackgroundImageName("japdahan.png");
+        //this.setBackgroundImageName("japdahan.png");
     }
 
     @Override
