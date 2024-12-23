@@ -89,6 +89,15 @@ item.steel_sword.name=Steel Sword
 
 item.copper_apple.name=Copper Apple
 
+item.peat.name=Peat
+item.lignite_coal.name=Lignite Coal
+item.anthracite_coal.name=Anthracite Coal
+
+item.empty_tin_can.name=Tin Can (Empty)
+item.water_tin_can.name=Tin Can (Water)
+item.lava_tin_can.name=Tin Can (Lava)
+item.oil_tin_can.name=Tin Can (The Missingfluid)
+
 tile.copper_block.name=Block of Copper
 tile.tin_block.name=Block of Tin
 tile.bronze_block.name=Block of Bronze
@@ -116,6 +125,12 @@ tile.steel_casing.name=Steel Machine Casing
 tile.ceramic_crucible.name=Ceramic Crucible
 tile.jmt0_steelmaker.name=Steelmaker (T0)
 tile.jmt0_steelmaker_lit.name=Steelmaker (Lit, T0)
+
+tile.peat_block.name=Peat Block
+tile.lignite.name=Lignite
+tile.anthracite.name=Anthracite
+
+fluid.oil.name=The Missingfluid
 
 itemGroup.tabJapdahanItems=Japdahan Items
 itemGroup.tabJapdahanBlocks=Japdahan Blocks

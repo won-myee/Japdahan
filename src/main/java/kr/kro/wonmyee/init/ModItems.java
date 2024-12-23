@@ -120,9 +120,20 @@ public class ModItems {
     //Foods
     public static Item copper_apple;
 
+    //Fuels
+    public static Item peat;
+    public static Item lignite_coal;
+    public static Item anthracite_coal;
+
+    //Tin Cans
+    public static Item empty_tin_can;
+    public static Item water_tin_can;
+    public static Item lava_tin_can;
+    public static Item oil_tin_can;
+
     public static void init() {
         //Hammer and Wrench
-        stone_hammer = new ItemModCraftingToolsSingleUse("stone_hammer");
+        stone_hammer = new ItemModHammerSingleUse(Item.ToolMaterial.STONE, "stone_hammer");
         copper_hammer = new ItemModHammer(copperMaterial, "copper_hammer", 64);
         bronze_hammer = new ItemModHammer(bronzeMaterial, "bronze_hammer", 96);
         iron_hammer = new ItemModHammer(Item.ToolMaterial.IRON, "iron_hammer", 128);
@@ -223,6 +234,17 @@ public class ModItems {
 
         //Foods
         copper_apple = new ItemModFood("copper_apple", 4, 0.8F, false, new PotionEffect(Potion.moveSpeed.id, 1200, 2), new PotionEffect(Potion.healthBoost.id, 100, 0));
+
+        //Fuels
+        peat = new ItemModFuel("peat");
+        lignite_coal = new ItemModFuel("lignite_coal");
+        anthracite_coal = new ItemModFuel("anthracite_coal");
+
+        //Tin Cans
+        empty_tin_can = new ItemModCanEmpty("empty_tin_can");
+        water_tin_can = new ItemModCan("water_tin_can");
+        lava_tin_can = new ItemModCan("lava_tin_can");
+        oil_tin_can = new ItemModCan("oil_tin_can");
     }
 
     public static void register() {
@@ -328,6 +350,17 @@ public class ModItems {
 
         //Foods
         registerItem(copper_apple);
+
+        //Fuels
+        registerItem(peat);
+        registerItem(lignite_coal);
+        registerItem(anthracite_coal);
+
+        //Tin Cans
+        registerItem(empty_tin_can);
+        registerItem(water_tin_can);
+        registerItem(lava_tin_can);
+        registerItem(oil_tin_can);
     }
 
     public static void registerRenders() {
@@ -433,6 +466,17 @@ public class ModItems {
 
         //Foods
         registerRender(copper_apple);
+
+        //Fuels
+        registerRender(peat);
+        registerRender(lignite_coal);
+        registerRender(anthracite_coal);
+
+        //Tin Cans
+        registerRender(empty_tin_can);
+        registerRender(water_tin_can);
+        registerRender(lava_tin_can);
+        registerRender(oil_tin_can);
     }
 
     public static void registerItem(Item item) {

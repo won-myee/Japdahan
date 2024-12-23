@@ -3,16 +3,15 @@ package kr.kro.wonmyee.items;
 import com.google.common.collect.Sets;
 import kr.kro.wonmyee.Japdahan;
 import kr.kro.wonmyee.init.ModBlocks;
-import kr.kro.wonmyee.init.ModItems;
+import kr.kro.wonmyee.variables.BlockCheck;
 import kr.kro.wonmyee.variables.CheatCheck;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
-import net.minecraft.entity.item.EntityItem;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.util.BlockPos;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 
@@ -53,7 +52,7 @@ public class ItemModHammer extends ItemTool {
 
     @Override
     public Set<String> getToolClasses(ItemStack itemStack) {
-        return Sets.newHashSet("wrench");
+        return Sets.newHashSet("hammer");
     }
 
     @Override
@@ -78,5 +77,52 @@ public class ItemModHammer extends ItemTool {
             }
         }
         return super.onItemUse(stack, playerIn, worldIn, pos, side, hitX, hitY, hitZ);
+    }
+
+    @Override
+    public boolean onBlockDestroyed(ItemStack stack, World worldIn, Block blockIn, BlockPos pos, EntityLivingBase playerIn) {
+        if(worldIn.getBlockState(pos).getBlock().isToolEffective("pickaxe", worldIn.getBlockState(pos))) {
+            if(playerIn.isSneaking()) {
+                if(!worldIn.isRemote) {
+                    if(CheatCheck.isCheatAllowed((EntityPlayer) playerIn)) {
+                        if(stack.getMaxDamage() - stack.getItemDamage() >= 7) {
+                            if(BlockCheck.is3x3BlockSame(worldIn.getBlockState(pos).getBlock(), worldIn, pos, playerIn.getHorizontalFacing())) {
+                                EnumFacing playerFacing = playerIn.getHorizontalFacing();
+                                if(playerFacing.equals(EnumFacing.WEST) || playerFacing.equals(EnumFacing.EAST)) {
+                                    stack.damageItem(9, playerIn);
+                                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + pos.getY() + " " + (pos.getZ()+1) + " minecraft:air");
+                                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + (pos.getY()-1) + " " + (pos.getZ()+1) + " minecraft:air");
+                                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + (pos.getY()-1) + " " + pos.getZ() + " minecraft:air");
+                                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + (pos.getY()-1) + " " + (pos.getZ()-1) + " minecraft:air");
+                                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + pos.getY() + " " + (pos.getZ()-1) + " minecraft:air");
+                                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + (pos.getY()+1) + " " + (pos.getZ()-1) + " minecraft:air");
+                                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + (pos.getY()+1) + " " + pos.getZ() + " minecraft:air");
+                                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + (pos.getY()+1) + " " + (pos.getZ()+1) + " minecraft:air");
+                                } else if(playerFacing.equals(EnumFacing.NORTH) || playerFacing.equals(EnumFacing.SOUTH)) {
+                                    stack.damageItem(9, playerIn);
+                                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + (pos.getX()+1) + " " + pos.getY() + " " + pos.getZ() + " minecraft:air");
+                                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + (pos.getX()+1) + " " + (pos.getY()-1) + " " + pos.getZ() + " minecraft:air");
+                                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + (pos.getY()-1) + " " + pos.getZ() + " minecraft:air");
+                                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + (pos.getX()-1) + " " + (pos.getY()-1) + " " + pos.getZ() + " minecraft:air");
+                                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + (pos.getX()-1) + " " + pos.getY() + " " + pos.getZ() + " minecraft:air");
+                                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + (pos.getX()-1) + " " + (pos.getY()+1) + " " + pos.getZ() + " minecraft:air");
+                                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + (pos.getY()+1) + " " + pos.getZ() + " minecraft:air");
+                                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + (pos.getX()+1) + " " + (pos.getY()+1) + " " + pos.getZ() + " minecraft:air");
+                                } else {
+                                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"Vertical 3x3 mining not supported!\",\"color\":\"red\"}");
+                                }
+                            } else {
+                                Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"Blocks in this 3x3 range are different\",\"color\":\"red\"}");
+                            }
+                        } else {
+                            Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"Durability is too low to do 3x3 mining!\",\"color\":\"red\"}");
+                        }
+                    } else {
+                        Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"You MUST enable cheats to do this action!\",\"color\":\"red\"}");
+                    }
+                }
+            }
+        }
+        return super.onBlockDestroyed(stack, worldIn, blockIn, pos, playerIn);
     }
 }

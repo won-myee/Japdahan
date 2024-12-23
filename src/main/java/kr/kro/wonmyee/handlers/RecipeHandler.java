@@ -31,7 +31,10 @@ public class RecipeHandler {
         registerRockRecipe(ModItems.end_rock, new ItemStack(Blocks.end_stone), ModBlocks.end_cobblestone);
 
         GameRegistry.addRecipe(new ItemStack(ModItems.bronze_mixture, 4), new Object[]{"CC","CT",'C',ModItems.copper_dust,'T',ModItems.tin_dust});
-        GameRegistry.addRecipe(new ItemStack(ModItems.steel_mixture, 4), new Object[]{"III","ICI","III",'I',ModItems.iron_dust,'C',Items.coal});
+        GameRegistry.addRecipe(new ItemStack(ModItems.steel_mixture, 2), new Object[]{" I "," P "," I ",'I',ModItems.iron_dust,'P',ModItems.peat});
+        GameRegistry.addRecipe(new ItemStack(ModItems.steel_mixture, 2), new Object[]{"   ","IPI","   ",'I',ModItems.iron_dust,'P',ModItems.peat});
+        GameRegistry.addRecipe(new ItemStack(ModItems.steel_mixture, 4), new Object[]{" I ","ICI"," I ",'I',ModItems.iron_dust,'C',Items.coal});
+        GameRegistry.addRecipe(new ItemStack(ModItems.steel_mixture, 8), new Object[]{"III","IAI","III",'I',ModItems.iron_dust,'A',ModItems.anthracite_coal});
 
         registerMaterialRecipe("Iron", Items.iron_ingot, Blocks.iron_block, ModItems.iron_plate, ModItems.iron_dust, ModItems.iron_rod, ModItems.iron_rodlong, ModItems.iron_gear, ModItems.iron_ring);
         registerMaterialRecipe("Gold", Items.gold_ingot, Blocks.gold_block, ModItems.gold_plate, ModItems.gold_dust, ModItems.gold_rod, ModItems.gold_rodlong, ModItems.gold_gear, ModItems.gold_ring);
@@ -47,6 +50,16 @@ public class RecipeHandler {
         GameRegistry.addRecipe(new ItemStack(ModItems.copper_apple), new Object[]{"III","IAI","III",'I',ModItems.copper_ingot,'A',Items.apple});
 
         registerMachineRecipe();
+
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.peat_block), new Object[]{"PPP","PPP","PPP",'P',ModItems.peat});
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.lignite), new Object[]{"LLL","LLL","LLL",'L',ModItems.lignite_coal});
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.anthracite), new Object[]{"AAA","AAA","AAA",'A',ModItems.anthracite_coal});
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.peat, 9), new Object[]{ModBlocks.peat_block});
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.lignite_coal, 9), new Object[]{ModBlocks.lignite});
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.anthracite_coal, 9), new Object[]{ModBlocks.anthracite});
+
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.empty_tin_can, 16), new Object[]{" T ","TGT"," T ",'T',"ingotTin",'G',Blocks.glass}));
+        GameRegistry.addShapelessRecipe(new ItemStack(Blocks.obsidian), new Object[]{ModItems.lava_tin_can, ModItems.water_tin_can});
         System.out.println("Registered Crafting Recipes!");
     }
 
@@ -54,7 +67,6 @@ public class RecipeHandler {
         registerOreRecipe("Copper", ModBlocks.copper_ore, ModBlocks.nether_copper_ore, ModBlocks.end_copper_ore, ModItems.copper_ingot);
         registerOreRecipe("Tin", ModBlocks.tin_ore, ModBlocks.nether_tin_ore, ModBlocks.end_tin_ore, ModItems.tin_ingot);
         GameRegistry.addSmelting(ModItems.bronze_mixture, new ItemStack(ModItems.bronze_ingot), 0);
-        GameRegistry.addSmelting(ModItems.steel_mixture, new ItemStack(ModItems.steel_ingot), 0);
         System.out.println("Registered Furnace Recipes!");
     }
 

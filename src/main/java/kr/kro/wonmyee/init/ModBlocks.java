@@ -43,6 +43,11 @@ public class ModBlocks {
     public static Block JMT0_steelmaker;
     public static Block JMT0_steelmaker_lit;
 
+    //Fuels
+    public static Block peat_block;
+    public static Block lignite;
+    public static Block anthracite;
+
     public static void init() {
         //Storage Blocks
         copper_block = new BlockMetalStorage("copper_block", 1, 3.5F);
@@ -76,6 +81,11 @@ public class ModBlocks {
         ceramic_crucible = new BlockUnaccessibleMachines("ceramic_crucible", 0, 1.25F);
         JMT0_steelmaker = new BlockJMT0Steelmaker("jmt0_steelmaker", -1, -1);
         JMT0_steelmaker_lit = new BlockUnaccessibleMachines("jmt0_steelmaker_lit", -1, -1);
+
+        //Fuels
+        peat_block = new BlockModPeat("peat_block", 0, 1.5F);
+        lignite = new BlockModFuel("lignite", 0, 2.5F);
+        anthracite = new BlockModFuel("anthracite", 1, 5.0F);
     }
 
     public static void register() {
@@ -111,6 +121,11 @@ public class ModBlocks {
         registerBlock(ceramic_crucible);
         registerBlock(JMT0_steelmaker);
         registerBlock(JMT0_steelmaker_lit);
+
+        //Fuels
+        registerBlock(peat_block);
+        registerBlock(lignite);
+        registerBlock(anthracite);
     }
 
     public static void registerRenders() {
@@ -146,6 +161,11 @@ public class ModBlocks {
         registerRender(ceramic_crucible);
         registerRender(JMT0_steelmaker);
         registerRender(JMT0_steelmaker_lit);
+
+        //Fuels
+        registerRender(peat_block);
+        registerRender(lignite);
+        registerRender(anthracite);
     }
 
     public static void registerBlock(Block block) {

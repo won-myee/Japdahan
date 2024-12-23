@@ -3,11 +3,14 @@ package kr.kro.wonmyee;
 import kr.kro.wonmyee.commands.CommandRegisterMachine;
 import kr.kro.wonmyee.creativetabs.TabJapdahanBlocks;
 import kr.kro.wonmyee.creativetabs.TabJapdahanItems;
+import kr.kro.wonmyee.handlers.FuelHandler;
 import kr.kro.wonmyee.handlers.RecipeHandler;
 import kr.kro.wonmyee.init.ModBlocks;
+import kr.kro.wonmyee.init.ModFluids;
 import kr.kro.wonmyee.init.ModItems;
 import kr.kro.wonmyee.items.OreDict;
 import kr.kro.wonmyee.proxy.CommonProxy;
+import kr.kro.wonmyee.worldgen.ModBiomes;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.fml.common.Mod;
@@ -15,6 +18,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class Japdahan {
@@ -36,6 +40,7 @@ public class Japdahan {
         ModItems.register();
         ModBlocks.init();
         ModBlocks.register();
+        ModFluids.register();
         ClientCommandHandler.instance.registerCommand(new CommandRegisterMachine());
     }
 
@@ -46,7 +51,9 @@ public class Japdahan {
         proxy.registerWorldGenerators();
         RecipeHandler.registerCraftingRecipes();
         RecipeHandler.registerFurnaceRecipes();
+        GameRegistry.registerFuelHandler(new FuelHandler());
         OreDict.register();
+        ModBiomes.register();
     }
 
     @Mod.EventHandler

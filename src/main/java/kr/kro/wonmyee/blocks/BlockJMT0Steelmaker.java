@@ -7,7 +7,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -70,15 +69,6 @@ public class BlockJMT0Steelmaker extends Block {
         super.onBlockAdded(worldIn, pos, state);
     }
 
-    /*@Override
-    public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
-        if(!worldIn.isRemote) {
-            blockPos.add(pos);
-            mixtureCount.add(blockPos.indexOf(pos));
-        }
-        return super.onBlockPlaced(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer);
-    }*/
-
     @Override
     public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
         if (!worldIn.isRemote) {
@@ -139,7 +129,7 @@ public class BlockJMT0Steelmaker extends Block {
                 } else {
                 }
             } else {
-                Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @s {\"text\":\"You MUST enable cheats to do this action!\",\"color\":\"red\"}");
+                Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"You MUST enable cheats to do this action!\",\"color\":\"red\"}");
             }
         }
         return super.onBlockActivated(worldIn, pos, state, playerIn, side, hitX, hitY, hitZ);
