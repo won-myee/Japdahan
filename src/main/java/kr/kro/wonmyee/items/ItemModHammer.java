@@ -8,6 +8,7 @@ import kr.kro.wonmyee.variables.CheatCheck;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
@@ -90,6 +91,9 @@ public class ItemModHammer extends ItemTool {
                                 EnumFacing playerFacing = playerIn.getHorizontalFacing();
                                 if(playerFacing.equals(EnumFacing.WEST) || playerFacing.equals(EnumFacing.EAST)) {
                                     stack.damageItem(9, playerIn);
+                                    for (int i = 0; i < 8; i++) {
+                                        worldIn.spawnEntityInWorld(new EntityItem(worldIn, pos.getX(), (pos.getY()+1), pos.getZ(), new ItemStack(worldIn.getBlockState(pos).getBlock())));
+                                    }
                                     Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + pos.getY() + " " + (pos.getZ()+1) + " minecraft:air");
                                     Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + (pos.getY()-1) + " " + (pos.getZ()+1) + " minecraft:air");
                                     Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + (pos.getY()-1) + " " + pos.getZ() + " minecraft:air");
@@ -100,6 +104,9 @@ public class ItemModHammer extends ItemTool {
                                     Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + (pos.getY()+1) + " " + (pos.getZ()+1) + " minecraft:air");
                                 } else if(playerFacing.equals(EnumFacing.NORTH) || playerFacing.equals(EnumFacing.SOUTH)) {
                                     stack.damageItem(9, playerIn);
+                                    for (int i = 0; i < 8; i++) {
+                                        worldIn.spawnEntityInWorld(new EntityItem(worldIn, pos.getX(), (pos.getY()+1), pos.getZ(), new ItemStack(worldIn.getBlockState(pos).getBlock())));
+                                    }
                                     Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + (pos.getX()+1) + " " + pos.getY() + " " + pos.getZ() + " minecraft:air");
                                     Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + (pos.getX()+1) + " " + (pos.getY()-1) + " " + pos.getZ() + " minecraft:air");
                                     Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + (pos.getY()-1) + " " + pos.getZ() + " minecraft:air");
@@ -112,7 +119,7 @@ public class ItemModHammer extends ItemTool {
                                     Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"Vertical 3x3 mining not supported!\",\"color\":\"red\"}");
                                 }
                             } else {
-                                Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"Blocks in this 3x3 range are different\",\"color\":\"red\"}");
+                                Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"Blocks in this 3x3 range are different!\",\"color\":\"red\"}");
                             }
                         } else {
                             Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"Durability is too low to do 3x3 mining!\",\"color\":\"red\"}");

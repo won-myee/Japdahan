@@ -5,6 +5,7 @@ import kr.kro.wonmyee.init.ModItems;
 import kr.kro.wonmyee.variables.CheatCheck;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
@@ -49,7 +50,20 @@ public class ItemModCan extends Item {
                 } else {
                     Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"No fluid in this can!\",\"color\":\"red\"}");
                 }
-                Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + (pos.getY()+1) + " " + pos.getZ() + " " + fluid);
+                EnumFacing facing = playerIn.getHorizontalFacing();
+                if(worldIn.getBlockState(new BlockPos(pos.getX(), (pos.getY()+1), pos.getZ())).getBlock() == Blocks.air) {
+                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + (pos.getY()+1) + " " + pos.getZ() + " " + fluid);
+                } else if(facing == EnumFacing.WEST) {
+                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + (pos.getX()+1) + " " + pos.getY() + " " + pos.getZ() + " " + fluid);
+                } else if(facing == EnumFacing.EAST) {
+                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + (pos.getX()-1) + " " + pos.getY() + " " + pos.getZ() + " " + fluid);
+                } else if(facing == EnumFacing.NORTH) {
+                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + pos.getY() + " " + (pos.getZ()+1) + " " + fluid);
+                } else if(facing == EnumFacing.SOUTH) {
+                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + pos.getY() + " " + (pos.getZ()-1) + " " + fluid);
+                } else {
+                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"Vertical fluid placement not supported!\",\"color\":\"red\"}");
+                }
             } else {
                 Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"You MUST enable cheats to do this action!\",\"color\":\"red\"}");
             }
