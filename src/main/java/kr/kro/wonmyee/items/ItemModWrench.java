@@ -2,6 +2,7 @@ package kr.kro.wonmyee.items;
 
 import com.google.common.collect.Sets;
 import kr.kro.wonmyee.Japdahan;
+import kr.kro.wonmyee.debug.LogHelper;
 import kr.kro.wonmyee.init.ModBlocks;
 import kr.kro.wonmyee.variables.CheatCheck;
 import net.minecraft.block.Block;
@@ -66,16 +67,6 @@ public class ItemModWrench extends ItemTool {
             if(getList().contains(worldIn.getBlockState(pos).getBlock())) {
                 if(CheatCheck.isCheatAllowed(playerIn)) {
                     if (stack.getMaxDamage() - stack.getItemDamage() > 7) {
-                        stack.setItemDamage(stack.getItemDamage() + 8);
-                        stack.stackSize = 1;
-                        if (!worldIn.isRemote) {
-                            worldIn.spawnEntityInWorld(new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(worldIn.getBlockState(pos).getBlock())));
-                        }
-                        for (int i = 1; i <= 30; i++) {
-                            worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), worldIn.getBlockState(pos).getBlock().stepSound.getBreakSound(), 50, 1, false);
-                        }
-                        playerIn.worldObj.setBlockToAir(pos);
-                    } else if (stack.getMaxDamage() - stack.getItemDamage() == 7) {
                         stack.damageItem(8, playerIn);
                         if (!worldIn.isRemote) {
                             worldIn.spawnEntityInWorld(new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(worldIn.getBlockState(pos).getBlock())));
@@ -83,26 +74,22 @@ public class ItemModWrench extends ItemTool {
                         for (int i = 1; i <= 30; i++) {
                             worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), worldIn.getBlockState(pos).getBlock().stepSound.getBreakSound(), 50, 1, false);
                         }
-                        Minecraft.getMinecraft().thePlayer.sendChatMessage("/playsound random.anvil_break " + playerIn.getName() + " " + playerIn.posX + " " + playerIn.posY + " " + playerIn.posZ + " 50 1");
                         playerIn.worldObj.setBlockToAir(pos);
                     } else {
+                        LogHelper.debug("Durability is too low for safe machine disassembling");
+                        Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"Durability is too low to do 3x3 mining!\",\"color\":\"red\"}");
                         worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), Block.soundTypeAnvil.getPlaceSound(), 30, 1, false);
                     }
                 } else {
-                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @s {\"text\":\"You MUST enable cheats to do this action!\",\"color\":\"red\"}");
+                    LogHelper.debug("Player is not OPed");
+                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"You MUST enable cheats to do this action!\",\"color\":\"red\"}");
                 }
             } else {
+                LogHelper.debug("Wrench shift-right click not applicable for this block");
                 worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), Block.soundTypeAnvil.getPlaceSound(), 30, 1, false);
             }
         }
         return super.onItemUse(stack, playerIn, worldIn, pos, side, hitX, hitY, hitZ);
     }
-
-    /*@Override
-    public ItemStack getContainerItem(ItemStack itemStack) {
-        // Assuming you want to damage it when used in crafting:
-        itemStack.attemptDamageItem(1, itemRand);
-        return itemStack; // then just return it
-    }*/
 
 }

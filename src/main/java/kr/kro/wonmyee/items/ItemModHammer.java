@@ -2,6 +2,7 @@ package kr.kro.wonmyee.items;
 
 import com.google.common.collect.Sets;
 import kr.kro.wonmyee.Japdahan;
+import kr.kro.wonmyee.debug.LogHelper;
 import kr.kro.wonmyee.init.ModBlocks;
 import kr.kro.wonmyee.variables.BlockCheck;
 import kr.kro.wonmyee.variables.CheatCheck;
@@ -70,10 +71,12 @@ public class ItemModHammer extends ItemTool {
                         Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + pos.getY() + " " + pos.getZ() + " minecraft:bedrock");
                         Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + pos.getY() + " " + pos.getZ() + " japdahan:" + originalBlock);
                     } else {
-                        Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @s {\"text\":\"You MUST enable cheats to do this action!\",\"color\":\"red\"}");
+                        LogHelper.debug("Player is not OPed");
+                        Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"You MUST enable cheats to do this action!\",\"color\":\"red\"}");
                     }
                 }
             } else {
+                LogHelper.debug("Hammer shift-right click not applicable for this block");
                 worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), Block.soundTypeAnvil.getPlaceSound(), 30, 1, false);
             }
         }
@@ -116,15 +119,19 @@ public class ItemModHammer extends ItemTool {
                                     Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + (pos.getY()+1) + " " + pos.getZ() + " minecraft:air");
                                     Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + (pos.getX()+1) + " " + (pos.getY()+1) + " " + pos.getZ() + " minecraft:air");
                                 } else {
+                                    LogHelper.debug("Invalid player facing");
                                     Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"Vertical 3x3 mining not supported!\",\"color\":\"red\"}");
                                 }
                             } else {
+                                LogHelper.debug("3x3 range blocks are different");
                                 Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"Blocks in this 3x3 range are different!\",\"color\":\"red\"}");
                             }
                         } else {
+                            LogHelper.debug("Durability is too low for 3x3 mining");
                             Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"Durability is too low to do 3x3 mining!\",\"color\":\"red\"}");
                         }
                     } else {
+                        LogHelper.debug("Player is not OPed");
                         Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"You MUST enable cheats to do this action!\",\"color\":\"red\"}");
                     }
                 }

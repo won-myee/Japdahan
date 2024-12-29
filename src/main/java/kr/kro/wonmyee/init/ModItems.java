@@ -1,6 +1,7 @@
 package kr.kro.wonmyee.init;
 
 import kr.kro.wonmyee.Reference;
+import kr.kro.wonmyee.debug.LogHelper;
 import kr.kro.wonmyee.items.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -245,6 +246,8 @@ public class ModItems {
         water_tin_can = new ItemModCan("water_tin_can");
         lava_tin_can = new ItemModCan("lava_tin_can");
         oil_tin_can = new ItemModCan("oil_tin_can");
+
+        LogHelper.info("Initialized Mod Items! (2/7)");
     }
 
     public static void register() {
@@ -361,6 +364,8 @@ public class ModItems {
         registerItem(water_tin_can);
         registerItem(lava_tin_can);
         registerItem(oil_tin_can);
+
+        LogHelper.info("Registered Mod Items! (3/7)");
     }
 
     public static void registerRenders() {

@@ -2,6 +2,7 @@ package kr.kro.wonmyee.items;
 
 import com.google.common.collect.Sets;
 import kr.kro.wonmyee.Japdahan;
+import kr.kro.wonmyee.debug.LogHelper;
 import kr.kro.wonmyee.init.ModBlocks;
 import kr.kro.wonmyee.variables.CheatCheck;
 import net.minecraft.block.Block;
@@ -41,10 +42,12 @@ public class ItemModHammerSingleUse extends ItemTool {
                         Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + pos.getY() + " " + pos.getZ() + " minecraft:bedrock");
                         Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + pos.getY() + " " + pos.getZ() + " japdahan:" + originalBlock);
                     } else {
-                        Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @s {\"text\":\"You MUST enable cheats to do this action!\",\"color\":\"red\"}");
+                        LogHelper.debug("Player is not OPed");
+                        Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"You MUST enable cheats to do this action!\",\"color\":\"red\"}");
                     }
                 }
             } else {
+                LogHelper.debug("Hammer shift-right click not applicable for this block");
                 worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), Block.soundTypeAnvil.getPlaceSound(), 30, 1, false);
             }
         }

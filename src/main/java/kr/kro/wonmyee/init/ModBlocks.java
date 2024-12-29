@@ -2,6 +2,7 @@ package kr.kro.wonmyee.init;
 
 import kr.kro.wonmyee.Reference;
 import kr.kro.wonmyee.blocks.*;
+import kr.kro.wonmyee.debug.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -86,6 +87,8 @@ public class ModBlocks {
         peat_block = new BlockModPeat("peat_block", 0, 1.5F);
         lignite = new BlockModFuel("lignite", 0, 2.5F);
         anthracite = new BlockModFuel("anthracite", 1, 5.0F);
+
+        LogHelper.info("Initialized Mod Blocks! (4/7)");
     }
 
     public static void register() {
@@ -126,6 +129,8 @@ public class ModBlocks {
         registerBlock(peat_block);
         registerBlock(lignite);
         registerBlock(anthracite);
+
+        LogHelper.info("Registered Mod Blocks! (5/7)");
     }
 
     public static void registerRenders() {

@@ -1,5 +1,6 @@
 package kr.kro.wonmyee.handlers;
 
+import kr.kro.wonmyee.debug.LogHelper;
 import kr.kro.wonmyee.init.ModBlocks;
 import kr.kro.wonmyee.init.ModItems;
 import net.minecraft.block.Block;
@@ -60,14 +61,14 @@ public class RecipeHandler {
 
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.empty_tin_can, 16), new Object[]{" T ","TGT"," T ",'T',"ingotTin",'G',Blocks.glass}));
         GameRegistry.addShapelessRecipe(new ItemStack(Blocks.obsidian), new Object[]{ModItems.lava_tin_can, ModItems.water_tin_can});
-        System.out.println("Registered Crafting Recipes!");
+        LogHelper.info("Registered Crafting Recipes! (3/7)");
     }
 
     public static void registerFurnaceRecipes() {
         registerOreRecipe("Copper", ModBlocks.copper_ore, ModBlocks.nether_copper_ore, ModBlocks.end_copper_ore, ModItems.copper_ingot);
         registerOreRecipe("Tin", ModBlocks.tin_ore, ModBlocks.nether_tin_ore, ModBlocks.end_tin_ore, ModItems.tin_ingot);
         GameRegistry.addSmelting(ModItems.bronze_mixture, new ItemStack(ModItems.bronze_ingot), 0);
-        System.out.println("Registered Furnace Recipes!");
+        LogHelper.info("Registered Furnace Recipes! (4/7)");
     }
 
     public static void registerCraftingToolRecipe(Item ingot, Item plate, Item hammer, Item wrench, Item file) {

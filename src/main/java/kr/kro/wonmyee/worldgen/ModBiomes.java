@@ -1,5 +1,6 @@
 package kr.kro.wonmyee.worldgen;
 
+import kr.kro.wonmyee.debug.LogHelper;
 import kr.kro.wonmyee.variables.BiomeIDCheck;
 import net.minecraftforge.common.BiomeManager;
 
@@ -20,5 +21,7 @@ public class ModBiomes {
         BiomeManager.addSpawnBiome(biomeStoneyDesert);
         BiomeManager.addBiome(BiomeManager.BiomeType.DESERT, new BiomeManager.BiomeEntry(biomeMissingland, 1));
         BiomeManager.addSpawnBiome(biomeMissingland);
+
+        LogHelper.info("Registered Mod Biomes! (7/7)");
     }
 }
