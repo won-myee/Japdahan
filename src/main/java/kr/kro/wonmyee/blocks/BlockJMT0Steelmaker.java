@@ -1,6 +1,7 @@
 package kr.kro.wonmyee.blocks;
 
 import kr.kro.wonmyee.Japdahan;
+import kr.kro.wonmyee.debug.LogHelper;
 import kr.kro.wonmyee.init.ModItems;
 import kr.kro.wonmyee.variables.CheatCheck;
 import net.minecraft.block.Block;
@@ -49,6 +50,21 @@ public class BlockJMT0Steelmaker extends Block {
         return itemArrayList;
     }
 
+    public ArrayList<String> getColor() {
+        ArrayList<String> colorArrayList = new ArrayList<String>();
+        colorArrayList.add("black");
+        colorArrayList.add("dark_blue");
+        colorArrayList.add("blue");
+        colorArrayList.add("dark_aqua");
+        colorArrayList.add("dark_green");
+        colorArrayList.add("green");
+        colorArrayList.add("yellow");
+        colorArrayList.add("gold");
+        colorArrayList.add("dark_red");
+        colorArrayList.add("red");
+        return colorArrayList;
+    }
+
     public static ArrayList<Integer> mixtureCount = new ArrayList<Integer>();
 
     public static ArrayList<BlockPos> blockPos = new ArrayList<BlockPos>();
@@ -83,22 +99,22 @@ public class BlockJMT0Steelmaker extends Block {
     public boolean onBlockActivated(final World worldIn, final BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {
         if(!worldIn.isRemote) {
             final int currentBlock;
-            System.out.println("blockPos Size: " + blockPos.size());
+            LogHelper.debug("blockPos Size: " + blockPos.size());
             currentBlock = blockPos.indexOf(pos);
-            System.out.println("currentBlock: " + currentBlock);
-            System.out.println("mixturecount Size: " + mixtureCount.size());
-            System.out.println("current mixture: " + mixtureCount.get(currentBlock));
+            LogHelper.debug("currentBlock: " + currentBlock);
+            LogHelper.debug("mixturecount Size: " + mixtureCount.size());
+            LogHelper.debug("current mixture: " + mixtureCount.get(currentBlock));
             if(CheatCheck.isCheatAllowed(playerIn)) {
                 if(playerIn.getHeldItem() == null) {
-                    Minecraft.getMinecraft().thePlayer.sendChatMessage("Hold Mixtures or Flint and Steel in your hand to use");
+                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"Hold Mixtures or Flint and Steel in your hand to use\",\"color\":\"yellow\"}");
                 } else if(!getList().contains(playerIn.getHeldItem())) {
                     if(playerIn.getHeldItem().getItem() == ModItems.steel_mixture) {
                         if(mixtureCount.get(currentBlock) == 9) {
-                            Minecraft.getMinecraft().thePlayer.sendChatMessage("Maximum Mixture Count Reached! (9/9)");
+                            Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"Maximum Mixture Count Reached! (9/9)\",\"color\":\"red\"}");
                         } else {
                             Minecraft.getMinecraft().thePlayer.sendChatMessage("/clear " + playerIn.getName() + " japdahan:steel_mixture 0 1");
                             mixtureCount.set(currentBlock, mixtureCount.get(currentBlock) + 1);
-                            Minecraft.getMinecraft().thePlayer.sendChatMessage("Mixture Count: (" + mixtureCount.get(currentBlock) + "/9)");
+                            Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"" + "Mixture Count: (" + mixtureCount.get(currentBlock) + "/9)" + "\",\"color\":\"" + getColor().get(mixtureCount.get(currentBlock)) + "\"}");
                         }
                     } else if(playerIn.getHeldItem().getItem() == Items.flint_and_steel) {
                         if(mixtureCount.get(currentBlock) != 0) {
@@ -121,10 +137,10 @@ public class BlockJMT0Steelmaker extends Block {
                                 }
                             }.start();
                         } else {
-                            Minecraft.getMinecraft().thePlayer.sendChatMessage("Put Mixtures first!");
+                            Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"Put Mixtures first!\",\"color\":\"red\"}");
                         }
                     } else {
-                        Minecraft.getMinecraft().thePlayer.sendChatMessage("Hold Mixtures or Flint and Steel in your hand to use");
+                        Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"Hold Mixtures or Flint and Steel in your hand to use\",\"color\":\"yellow\"}");
                     }
                 } else {
                 }

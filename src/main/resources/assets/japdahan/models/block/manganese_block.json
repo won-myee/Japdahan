@@ -1,0 +1,6 @@
+{
+  "parent" : "block/cube_all",
+  "textures" : {
+    "all" : "japdahan:blocks/manganese_block"
+  }
+}

@@ -43,6 +43,18 @@ public class RecipeHandler {
         registerMaterialRecipe("Tin", ModItems.tin_ingot, ModBlocks.tin_block, ModItems.tin_plate, ModItems.tin_dust, ModItems.tin_rod, ModItems.tin_rodlong, ModItems.tin_gear, ModItems.tin_ring);
         registerMaterialRecipe("Bronze", ModItems.bronze_ingot, ModBlocks.bronze_block, ModItems.bronze_plate, ModItems.bronze_dust, ModItems.bronze_rod, ModItems.bronze_rodlong, ModItems.bronze_gear, ModItems.bronze_ring);
         registerMaterialRecipe("Steel", ModItems.steel_ingot, ModBlocks.steel_block, ModItems.steel_plate, ModItems.steel_dust, ModItems.steel_rod, ModItems.steel_rodlong, ModItems.steel_gear, ModItems.steel_ring);
+        registerMaterialRecipe("Lithium", ModItems.lithium_ingot, ModBlocks.lithium_block, ModItems.lithium_plate, ModItems.lithium_dust, ModItems.lithium_rod, ModItems.lithium_rodlong, ModItems.lithium_gear, ModItems.lithium_ring);
+        registerMaterialRecipe("Beryllium", ModItems.beryllium_ingot, ModBlocks.beryllium_block, ModItems.beryllium_plate, ModItems.beryllium_dust, ModItems.beryllium_rod, ModItems.beryllium_rodlong, ModItems.beryllium_gear, ModItems.beryllium_ring);
+        registerMaterialRecipe("Boron", ModItems.boron_ingot, ModBlocks.boron_block, ModItems.boron_plate, ModItems.boron_dust, ModItems.boron_rod, ModItems.boron_rodlong, ModItems.boron_gear, ModItems.boron_ring);
+        registerMaterialRecipe("Carbon", ModItems.carbon_ingot, ModBlocks.carbon_block, ModItems.carbon_plate, ModItems.carbon_dust, ModItems.carbon_rod, ModItems.carbon_rodlong, ModItems.carbon_gear, ModItems.carbon_ring);
+        registerMaterialRecipe("Sodium", ModItems.sodium_ingot, ModBlocks.sodium_block, ModItems.sodium_plate, ModItems.sodium_dust, ModItems.sodium_rod, ModItems.sodium_rodlong, ModItems.sodium_gear, ModItems.sodium_ring);
+        registerMaterialRecipe("Magnesium", ModItems.magnesium_ingot, ModBlocks.magnesium_block, ModItems.magnesium_plate, ModItems.magnesium_dust, ModItems.magnesium_rod, ModItems.magnesium_rodlong, ModItems.magnesium_gear, ModItems.magnesium_ring);
+        registerMaterialRecipe("Aluminum", ModItems.aluminum_ingot, ModBlocks.aluminum_block, ModItems.aluminum_plate, ModItems.aluminum_dust, ModItems.aluminum_rod, ModItems.aluminum_rodlong, ModItems.aluminum_gear, ModItems.aluminum_ring);
+        registerMaterialRecipe("Silicon", ModItems.silicon_ingot, ModBlocks.silicon_block, ModItems.silicon_plate, ModItems.silicon_dust, ModItems.silicon_rod, ModItems.silicon_rodlong, ModItems.silicon_gear, ModItems.silicon_ring);
+        registerMaterialRecipe("Phosphorus", ModItems.phosphorus_ingot, ModBlocks.phosphorus_block, ModItems.phosphorus_plate, ModItems.phosphorus_dust, ModItems.phosphorus_rod, ModItems.phosphorus_rodlong, ModItems.phosphorus_gear, ModItems.phosphorus_ring);
+        registerMaterialRecipe("Sulfur", ModItems.sulfur_ingot, ModBlocks.sulfur_block, ModItems.sulfur_plate, ModItems.sulfur_dust, ModItems.sulfur_rod, ModItems.sulfur_rodlong, ModItems.sulfur_gear, ModItems.sulfur_ring);
+        registerMaterialRecipe("Potassium", ModItems.potassium_ingot, ModBlocks.potassium_block, ModItems.potassium_plate, ModItems.potassium_dust, ModItems.potassium_rod, ModItems.potassium_rodlong, ModItems.potassium_gear, ModItems.potassium_ring);
+        registerMaterialRecipe("Calcium", ModItems.calcium_ingot, ModBlocks.calcium_block, ModItems.calcium_plate, ModItems.calcium_dust, ModItems.calcium_rod, ModItems.calcium_rodlong, ModItems.calcium_gear, ModItems.calcium_ring);
 
         registerToolRecipe(ModItems.copper_pickaxe, ModItems.copper_hoe, ModItems.copper_axe, ModItems.copper_shovel, ModItems.copper_sword, ModItems.copper_ingot);
         registerToolRecipe(ModItems.bronze_pickaxe, ModItems.bronze_hoe, ModItems.bronze_axe, ModItems.bronze_shovel, ModItems.bronze_sword, ModItems.bronze_ingot);
@@ -103,8 +115,8 @@ public class RecipeHandler {
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(storageBlock), new Object[]{"block"+materialName}));
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(plate), new Object[]{"plate"+materialName}));
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(dust), new Object[]{"dust"+materialName}));
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(rod), new Object[]{"rod"+materialName}));
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(rodLong), new Object[]{"rodLong"+materialName}));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(rod), new Object[]{"stick"+materialName}));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(rodLong), new Object[]{"stickLong"+materialName}));
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(gear), new Object[]{"gear"+materialName}));
 
         GameRegistry.addRecipe(new ItemStack(storageBlock), new Object[]{"III", "III", "III", 'I', ingot});

@@ -1,7 +1,6 @@
 package kr.kro.wonmyee;
 
 import kr.kro.wonmyee.commands.CommandDebugMode;
-import kr.kro.wonmyee.commands.CommandRegisterMachine;
 import kr.kro.wonmyee.creativetabs.TabJapdahanBlocks;
 import kr.kro.wonmyee.creativetabs.TabJapdahanItems;
 import kr.kro.wonmyee.debug.LogHelper;
@@ -22,7 +21,6 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
