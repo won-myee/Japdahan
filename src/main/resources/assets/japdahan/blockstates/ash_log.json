@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "axis=y":  { "model": "japdahan:ash_log" },
+    "axis=z":   { "model": "japdahan:ash_log_side" },
+    "axis=x":   { "model": "japdahan:ash_log_side", "y": 90 },
+    "axis=none": { "model": "japdahan:ash_bark" }
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "japdahan:blocks/warped_log_top",
+        "side": "japdahan:blocks/warped_log"
+    }
+}

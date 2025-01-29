@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "japdahan:white_cedar_half_slab" },
+        "half=top": { "model": "japdahan:white_cedar_upper_slab" }
+    }
+}

@@ -10,7 +10,19 @@ import java.util.ArrayList;
 public class BlockCheck {
 
     public static boolean is3x3BlockSame(Block origBlock, World worldIn, BlockPos pos, EnumFacing facing) {
-        if(facing.equals(EnumFacing.WEST) || facing.equals(EnumFacing.EAST)) {
+        if(facing.equals(EnumFacing.UP) || facing.equals(EnumFacing.DOWN)){
+            //facing vertically
+            ArrayList<Boolean> boolList = new ArrayList<Boolean>();
+            boolList.add(isAdjacentBlockSame(origBlock, worldIn, pos, 1, 0, 0));
+            boolList.add(isAdjacentBlockSame(origBlock, worldIn, pos, 1, 0, 1));
+            boolList.add(isAdjacentBlockSame(origBlock, worldIn, pos, 0, 0, 1));
+            boolList.add(isAdjacentBlockSame(origBlock, worldIn, pos, -1, 0, 1));
+            boolList.add(isAdjacentBlockSame(origBlock, worldIn, pos, -1, 0, 0));
+            boolList.add(isAdjacentBlockSame(origBlock, worldIn, pos, -1, 0, -1));
+            boolList.add(isAdjacentBlockSame(origBlock, worldIn, pos, 0, 0, -1));
+            boolList.add(isAdjacentBlockSame(origBlock, worldIn, pos, 1, 0, -1));
+            return verifyAllEqual(boolList);
+        } else if(facing.equals(EnumFacing.WEST) || facing.equals(EnumFacing.EAST)) {
             //facing X coordinate
             ArrayList<Boolean> boolList = new ArrayList<Boolean>();
             boolList.add(isAdjacentBlockSame(origBlock, worldIn, pos, 0, 0, 1));

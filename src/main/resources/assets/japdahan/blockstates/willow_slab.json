@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "japdahan:willow_half_slab" },
+        "half=top": { "model": "japdahan:willow_upper_slab" }
+    }
+}

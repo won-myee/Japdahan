@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "japdahan:blocks/hickory_sapling"
+    }
+}

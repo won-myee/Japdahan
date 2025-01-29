@@ -56,6 +56,121 @@ public class ModBlocks {
     public static Block nether_cobblestone;
     public static Block end_cobblestone;
 
+    //Logs
+    //From future MC versions
+    public static Block mangrove_log;
+    public static Block cherry_log;
+    public static Block pale_oak_log;
+    public static Block bamboo_log;
+    public static Block crimson_log;
+    public static Block warped_log;
+    //From TFC
+    public static Block ash_log;
+    public static Block aspen_log;
+    public static Block chestnut_log;
+    public static Block douglas_fir_log;
+    public static Block hickory_log;
+    public static Block kapok_log;
+    public static Block maple_log;
+    public static Block pine_log;
+    public static Block sequoia_log;
+    public static Block sycamore_log;
+    public static Block white_cedar_log;
+    public static Block white_elm_log;
+    public static Block willow_log;
+
+    //Planks
+    //From future MC versions
+    public static Block mangrove_planks;
+    public static Block cherry_planks;
+    public static Block pale_oak_planks;
+    public static Block bamboo_planks;
+    public static Block crimson_planks;
+    public static Block warped_planks;
+    //From TFC
+    public static Block ash_planks;
+    public static Block aspen_planks;
+    public static Block chestnut_planks;
+    public static Block douglas_fir_planks;
+    public static Block hickory_planks;
+    public static Block kapok_planks;
+    public static Block maple_planks;
+    public static Block pine_planks;
+    public static Block sequoia_planks;
+    public static Block sycamore_planks;
+    public static Block white_cedar_planks;
+    public static Block white_elm_planks;
+    public static Block willow_planks;
+
+    //Stairs
+    //From future MC versions
+    public static Block mangrove_stairs;
+    public static Block cherry_stairs;
+    public static Block pale_oak_stairs;
+    public static Block bamboo_stairs;
+    public static Block crimson_stairs;
+    public static Block warped_stairs;
+    //From TFC
+    public static Block ash_stairs;
+    public static Block aspen_stairs;
+    public static Block chestnut_stairs;
+    public static Block douglas_fir_stairs;
+    public static Block hickory_stairs;
+    public static Block kapok_stairs;
+    public static Block maple_stairs;
+    public static Block pine_stairs;
+    public static Block sequoia_stairs;
+    public static Block sycamore_stairs;
+    public static Block white_cedar_stairs;
+    public static Block white_elm_stairs;
+    public static Block willow_stairs;
+
+    //Slabs
+    //From future MC versions
+    public static Block mangrove_slab;
+    public static Block cherry_slab;
+    public static Block pale_oak_slab;
+    public static Block bamboo_slab;
+    public static Block crimson_slab;
+    public static Block warped_slab;
+    //From TFC
+    public static Block ash_slab;
+    public static Block aspen_slab;
+    public static Block chestnut_slab;
+    public static Block douglas_fir_slab;
+    public static Block hickory_slab;
+    public static Block kapok_slab;
+    public static Block maple_slab;
+    public static Block pine_slab;
+    public static Block sequoia_slab;
+    public static Block sycamore_slab;
+    public static Block white_cedar_slab;
+    public static Block white_elm_slab;
+    public static Block willow_slab;
+
+    //Saplings
+    //From future MC versions
+    public static Block mangrove_sapling;
+    public static Block cherry_sapling;
+    public static Block pale_oak_sapling;
+    public static Block bamboo_sapling;
+    public static Block crimson_sapling;
+    public static Block warped_sapling;
+    //From TFC
+    public static Block ash_sapling;
+    public static Block aspen_sapling;
+    public static Block chestnut_sapling;
+    public static Block douglas_fir_sapling;
+    public static Block hickory_sapling;
+    public static Block kapok_sapling;
+    public static Block maple_sapling;
+    public static Block pine_sapling;
+    public static Block sequoia_sapling;
+    public static Block sycamore_sapling;
+    public static Block white_cedar_sapling;
+    public static Block white_elm_sapling;
+    public static Block willow_sapling;
+
     //Machine Casings
     public static Block bronze_casing;
     public static Block iron_casing;
@@ -278,6 +393,121 @@ public class ModBlocks {
         prismarine_cobblestone = new BlockRock("prismarine_cobblestone");
         nether_cobblestone = new BlockRock("nether_cobblestone");
         end_cobblestone = new BlockRock("end_cobblestone");
+
+        //Logs
+        //From future MC versions
+        mangrove_log = new BlockModLog("mangrove_log");
+        cherry_log = new BlockModLog("cherry_log");
+        pale_oak_log = new BlockModLog("pale_oak_log");
+        bamboo_log = new BlockModLog("bamboo_log");
+        crimson_log = new BlockModLog("crimson_log");
+        warped_log = new BlockModLog("warped_log");
+        //From TFC
+        ash_log = new BlockModLog("ash_log");
+        aspen_log = new BlockModLog("aspen_log");
+        chestnut_log = new BlockModLog("chestnut_log");
+        douglas_fir_log = new BlockModLog("douglas_fir_log");
+        hickory_log = new BlockModLog("hickory_log");
+        kapok_log = new BlockModLog("kapok_log");
+        maple_log = new BlockModLog("maple_log");
+        pine_log = new BlockModLog("pine_log");
+        sequoia_log = new BlockModLog("sequoia_log");
+        sycamore_log = new BlockModLog("sycamore_log");
+        white_cedar_log = new BlockModLog("white_cedar_log");
+        white_elm_log = new BlockModLog("white_elm_log");
+        willow_log = new BlockModLog("willow_log");
+
+        //Planks
+        //From future MC versions
+        mangrove_planks = new BlockModPlanks("mangrove_planks");
+        cherry_planks = new BlockModPlanks("cherry_planks");
+        pale_oak_planks = new BlockModPlanks("pale_oak_planks");
+        bamboo_planks = new BlockModPlanks("bamboo_planks");
+        crimson_planks = new BlockModPlanks("crimson_planks");
+        warped_planks = new BlockModPlanks("warped_planks");
+        //From TFC
+        ash_planks = new BlockModPlanks("ash_planks");
+        aspen_planks = new BlockModPlanks("aspen_planks");
+        chestnut_planks = new BlockModPlanks("chestnut_planks");
+        douglas_fir_planks = new BlockModPlanks("douglas_fir_planks");
+        hickory_planks = new BlockModPlanks("hickory_planks");
+        kapok_planks = new BlockModPlanks("kapok_planks");
+        maple_planks = new BlockModPlanks("maple_planks");
+        pine_planks = new BlockModPlanks("pine_planks");
+        sequoia_planks = new BlockModPlanks("sequoia_planks");
+        sycamore_planks = new BlockModPlanks("sycamore_planks");
+        white_cedar_planks = new BlockModPlanks("white_cedar_planks");
+        white_elm_planks = new BlockModPlanks("white_elm_planks");
+        willow_planks = new BlockModPlanks("willow_planks");
+
+        //Stairs
+        //From future MC versions
+        mangrove_stairs = new BlockModStairs("mangrove_stairs", mangrove_planks.getDefaultState());
+        cherry_stairs = new BlockModStairs("cherry_stairs", cherry_planks.getDefaultState());
+        pale_oak_stairs = new BlockModStairs("pale_oak_stairs", pale_oak_planks.getDefaultState());
+        bamboo_stairs = new BlockModStairs("bamboo_stairs", bamboo_planks.getDefaultState());
+        crimson_stairs = new BlockModStairs("crimson_stairs", crimson_planks.getDefaultState());
+        warped_stairs = new BlockModStairs("warped_stairs", warped_planks.getDefaultState());
+        //From TFC
+        ash_stairs = new BlockModStairs("ash_stairs", ash_planks.getDefaultState());
+        aspen_stairs = new BlockModStairs("aspen_stairs", aspen_planks.getDefaultState());
+        chestnut_stairs = new BlockModStairs("chestnut_stairs", chestnut_planks.getDefaultState());
+        douglas_fir_stairs = new BlockModStairs("douglas_fir_stairs", douglas_fir_planks.getDefaultState());
+        hickory_stairs = new BlockModStairs("hickory_stairs", hickory_planks.getDefaultState());
+        kapok_stairs = new BlockModStairs("kapok_stairs", kapok_planks.getDefaultState());
+        maple_stairs = new BlockModStairs("maple_stairs", maple_planks.getDefaultState());
+        pine_stairs = new BlockModStairs("pine_stairs", pine_planks.getDefaultState());
+        sequoia_stairs = new BlockModStairs("sequoia_stairs", sequoia_planks.getDefaultState());
+        sycamore_stairs = new BlockModStairs("sycamore_stairs", sycamore_planks.getDefaultState());
+        white_cedar_stairs = new BlockModStairs("white_cedar_stairs", white_cedar_planks.getDefaultState());
+        white_elm_stairs = new BlockModStairs("white_elm_stairs", white_elm_planks.getDefaultState());
+        willow_stairs = new BlockModStairs("willow_stairs", willow_planks.getDefaultState());
+
+        //Slabs
+        //From future MC versions
+        mangrove_slab = new BlockModSlab("mangrove_slab");
+        cherry_slab = new BlockModSlab("cherry_slab");
+        pale_oak_slab = new BlockModSlab("pale_oak_slab");
+        bamboo_slab = new BlockModSlab("bamboo_slab");
+        crimson_slab = new BlockModSlab("crimson_slab");
+        warped_slab = new BlockModSlab("warped_slab");
+        //From TFC
+        ash_slab = new BlockModSlab("ash_slab");
+        aspen_slab = new BlockModSlab("aspen_slab");
+        chestnut_slab = new BlockModSlab("chestnut_slab");
+        douglas_fir_slab = new BlockModSlab("douglas_fir_slab");
+        hickory_slab = new BlockModSlab("hickory_slab");
+        kapok_slab = new BlockModSlab("kapok_slab");
+        maple_slab = new BlockModSlab("maple_slab");
+        pine_slab = new BlockModSlab("pine_slab");
+        sequoia_slab = new BlockModSlab("sequoia_slab");
+        sycamore_slab = new BlockModSlab("sycamore_slab");
+        white_cedar_slab = new BlockModSlab("white_cedar_slab");
+        white_elm_slab = new BlockModSlab("white_elm_slab");
+        willow_slab = new BlockModSlab("willow_slab");
+
+        //Saplings
+        //From future MC versions
+        mangrove_sapling = new BlockModSapling("mangrove_sapling");
+        cherry_sapling = new BlockModSapling("cherry_sapling");
+        pale_oak_sapling = new BlockModSapling("pale_oak_sapling");
+        bamboo_sapling = new BlockModSapling("bamboo_sapling");
+        crimson_sapling = new BlockModSapling("crimson_sapling");
+        warped_sapling = new BlockModSapling("warped_sapling");
+        //From TFC
+        ash_sapling = new BlockModSapling("ash_sapling");
+        aspen_sapling = new BlockModSapling("aspen_sapling");
+        chestnut_sapling = new BlockModSapling("chestnut_sapling");
+        douglas_fir_sapling = new BlockModSapling("douglas_fir_sapling");
+        hickory_sapling = new BlockModSapling("hickory_sapling");
+        kapok_sapling = new BlockModSapling("kapok_sapling");
+        maple_sapling = new BlockModSapling("maple_sapling");
+        pine_sapling = new BlockModSapling("pine_sapling");
+        sequoia_sapling = new BlockModSapling("sequoia_sapling");
+        sycamore_sapling = new BlockModSapling("sycamore_sapling");
+        white_cedar_sapling = new BlockModSapling("white_cedar_sapling");
+        white_elm_sapling = new BlockModSapling("white_elm_sapling");
+        willow_sapling = new BlockModSapling("willow_sapling");
 
         //Machine Casings
         bronze_casing = new BlockMachineCasing("bronze_casing", 1, 4.0F);
@@ -503,6 +733,121 @@ public class ModBlocks {
         registerBlock(nether_cobblestone);
         registerBlock(end_cobblestone);
 
+        //Logs
+        //From future MC versions
+        registerBlock(mangrove_log);
+        registerBlock(cherry_log);
+        registerBlock(pale_oak_log);
+        registerBlock(bamboo_log);
+        registerBlock(crimson_log);
+        registerBlock(warped_log);
+        //From TFC
+        registerBlock(ash_log);
+        registerBlock(aspen_log);
+        registerBlock(chestnut_log);
+        registerBlock(douglas_fir_log);
+        registerBlock(hickory_log);
+        registerBlock(kapok_log);
+        registerBlock(maple_log);
+        registerBlock(pine_log);
+        registerBlock(sequoia_log);
+        registerBlock(sycamore_log);
+        registerBlock(white_cedar_log);
+        registerBlock(white_elm_log);
+        registerBlock(willow_log);
+
+        //Planks
+        //From future MC versions
+        registerBlock(mangrove_planks);
+        registerBlock(cherry_planks);
+        registerBlock(pale_oak_planks);
+        registerBlock(bamboo_planks);
+        registerBlock(crimson_planks);
+        registerBlock(warped_planks);
+        //From TFC
+        registerBlock(ash_planks);
+        registerBlock(aspen_planks);
+        registerBlock(chestnut_planks);
+        registerBlock(douglas_fir_planks);
+        registerBlock(hickory_planks);
+        registerBlock(kapok_planks);
+        registerBlock(maple_planks);
+        registerBlock(pine_planks);
+        registerBlock(sequoia_planks);
+        registerBlock(sycamore_planks);
+        registerBlock(white_cedar_planks);
+        registerBlock(white_elm_planks);
+        registerBlock(willow_planks);
+
+        //Stairs
+        //From future MC versions
+        registerBlock(mangrove_stairs);
+        registerBlock(cherry_stairs);
+        registerBlock(pale_oak_stairs);
+        registerBlock(bamboo_stairs);
+        registerBlock(crimson_stairs);
+        registerBlock(warped_stairs);
+        //From TFC
+        registerBlock(ash_stairs);
+        registerBlock(aspen_stairs);
+        registerBlock(chestnut_stairs);
+        registerBlock(douglas_fir_stairs);
+        registerBlock(hickory_stairs);
+        registerBlock(kapok_stairs);
+        registerBlock(maple_stairs);
+        registerBlock(pine_stairs);
+        registerBlock(sequoia_stairs);
+        registerBlock(sycamore_stairs);
+        registerBlock(white_cedar_stairs);
+        registerBlock(white_elm_stairs);
+        registerBlock(willow_stairs);
+
+        //Slabs
+        //From future MC versions
+        registerBlock(mangrove_slab);
+        registerBlock(cherry_slab);
+        registerBlock(pale_oak_slab);
+        registerBlock(bamboo_slab);
+        registerBlock(crimson_slab);
+        registerBlock(warped_slab);
+        //From TFC
+        registerBlock(ash_slab);
+        registerBlock(aspen_slab);
+        registerBlock(chestnut_slab);
+        registerBlock(douglas_fir_slab);
+        registerBlock(hickory_slab);
+        registerBlock(kapok_slab);
+        registerBlock(maple_slab);
+        registerBlock(pine_slab);
+        registerBlock(sequoia_slab);
+        registerBlock(sycamore_slab);
+        registerBlock(white_cedar_slab);
+        registerBlock(white_elm_slab);
+        registerBlock(willow_slab);
+
+        //Saplings
+        //From future MC versions
+        registerBlock(mangrove_sapling);
+        registerBlock(cherry_sapling);
+        registerBlock(pale_oak_sapling);
+        registerBlock(bamboo_sapling);
+        registerBlock(crimson_sapling);
+        registerBlock(warped_sapling);
+        //From TFC
+        registerBlock(ash_sapling);
+        registerBlock(aspen_sapling);
+        registerBlock(chestnut_sapling);
+        registerBlock(douglas_fir_sapling);
+        registerBlock(hickory_sapling);
+        registerBlock(kapok_sapling);
+        registerBlock(maple_sapling);
+        registerBlock(pine_sapling);
+        registerBlock(sequoia_sapling);
+        registerBlock(sycamore_sapling);
+        registerBlock(white_cedar_sapling);
+        registerBlock(white_elm_sapling);
+        registerBlock(willow_sapling);
+
         //Machine Casings
         registerBlock(bronze_casing);
         registerBlock(iron_casing);
@@ -726,6 +1071,121 @@ public class ModBlocks {
         registerRender(prismarine_cobblestone);
         registerRender(nether_cobblestone);
         registerRender(end_cobblestone);
+
+        //Logs
+        //From future MC versions
+        registerRender(mangrove_log);
+        registerRender(cherry_log);
+        registerRender(pale_oak_log);
+        registerRender(bamboo_log);
+        registerRender(crimson_log);
+        registerRender(warped_log);
+        //From TFC
+        registerRender(ash_log);
+        registerRender(aspen_log);
+        registerRender(chestnut_log);
+        registerRender(douglas_fir_log);
+        registerRender(hickory_log);
+        registerRender(kapok_log);
+        registerRender(maple_log);
+        registerRender(pine_log);
+        registerRender(sequoia_log);
+        registerRender(sycamore_log);
+        registerRender(white_cedar_log);
+        registerRender(white_elm_log);
+        registerRender(willow_log);
+
+        //Planks
+        //From future MC versions
+        registerRender(mangrove_planks);
+        registerRender(cherry_planks);
+        registerRender(pale_oak_planks);
+        registerRender(bamboo_planks);
+        registerRender(crimson_planks);
+        registerRender(warped_planks);
+        //From TFC
+        registerRender(ash_planks);
+        registerRender(aspen_planks);
+        registerRender(chestnut_planks);
+        registerRender(douglas_fir_planks);
+        registerRender(hickory_planks);
+        registerRender(kapok_planks);
+        registerRender(maple_planks);
+        registerRender(pine_planks);
+        registerRender(sequoia_planks);
+        registerRender(sycamore_planks);
+        registerRender(white_cedar_planks);
+        registerRender(white_elm_planks);
+        registerRender(willow_planks);
+
+        //Stairs
+        //From future MC versions
+        registerRender(mangrove_stairs);
+        registerRender(cherry_stairs);
+        registerRender(pale_oak_stairs);
+        registerRender(bamboo_stairs);
+        registerRender(crimson_stairs);
+        registerRender(warped_stairs);
+        //From TFC
+        registerRender(ash_stairs);
+        registerRender(aspen_stairs);
+        registerRender(chestnut_stairs);
+        registerRender(douglas_fir_stairs);
+        registerRender(hickory_stairs);
+        registerRender(kapok_stairs);
+        registerRender(maple_stairs);
+        registerRender(pine_stairs);
+        registerRender(sequoia_stairs);
+        registerRender(sycamore_stairs);
+        registerRender(white_cedar_stairs);
+        registerRender(white_elm_stairs);
+        registerRender(willow_stairs);
+
+        //Slabs
+        //From future MC versions
+        registerRender(mangrove_slab);
+        registerRender(cherry_slab);
+        registerRender(pale_oak_slab);
+        registerRender(bamboo_slab);
+        registerRender(crimson_slab);
+        registerRender(warped_slab);
+        //From TFC
+        registerRender(ash_slab);
+        registerRender(aspen_slab);
+        registerRender(chestnut_slab);
+        registerRender(douglas_fir_slab);
+        registerRender(hickory_slab);
+        registerRender(kapok_slab);
+        registerRender(maple_slab);
+        registerRender(pine_slab);
+        registerRender(sequoia_slab);
+        registerRender(sycamore_slab);
+        registerRender(white_cedar_slab);
+        registerRender(white_elm_slab);
+        registerRender(willow_slab);
+
+        //Saplings
+        //From future MC versions
+        registerRender(mangrove_sapling);
+        registerRender(cherry_sapling);
+        registerRender(pale_oak_sapling);
+        registerRender(bamboo_sapling);
+        registerRender(crimson_sapling);
+        registerRender(warped_sapling);
+        //From TFC
+        registerRender(ash_sapling);
+        registerRender(aspen_sapling);
+        registerRender(chestnut_sapling);
+        registerRender(douglas_fir_sapling);
+        registerRender(hickory_sapling);
+        registerRender(kapok_sapling);
+        registerRender(maple_sapling);
+        registerRender(pine_sapling);
+        registerRender(sequoia_sapling);
+        registerRender(sycamore_sapling);
+        registerRender(white_cedar_sapling);
+        registerRender(white_elm_sapling);
+        registerRender(willow_sapling);
 
         //Machine Casings
         registerRender(bronze_casing);

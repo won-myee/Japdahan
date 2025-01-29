@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "japdahan:pale_oak_half_slab" },
+        "half=top": { "model": "japdahan:pale_oak_upper_slab" }
+    }
+}

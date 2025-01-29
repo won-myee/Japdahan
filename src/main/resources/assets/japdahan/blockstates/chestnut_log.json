@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "axis=y":  { "model": "japdahan:chestnut_log" },
+    "axis=z":   { "model": "japdahan:chestnut_log_side" },
+    "axis=x":   { "model": "japdahan:chestnut_log_side", "y": 90 },
+    "axis=none": { "model": "japdahan:chestnut_bark" }
+  }
+}

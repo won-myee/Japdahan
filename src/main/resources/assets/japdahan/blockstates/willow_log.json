@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "axis=y":  { "model": "japdahan:willow_log" },
+    "axis=z":   { "model": "japdahan:willow_log_side" },
+    "axis=x":   { "model": "japdahan:willow_log_side", "y": 90 },
+    "axis=none": { "model": "japdahan:willow_bark" }
+  }
+}

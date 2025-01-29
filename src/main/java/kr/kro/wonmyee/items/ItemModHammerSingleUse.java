@@ -6,8 +6,10 @@ import kr.kro.wonmyee.debug.LogHelper;
 import kr.kro.wonmyee.init.ModBlocks;
 import kr.kro.wonmyee.variables.CheatCheck;
 import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.util.BlockPos;
@@ -32,15 +34,28 @@ public class ItemModHammerSingleUse extends ItemTool {
     }
 
     @Override
-    public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, final BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ) {
+    public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, final World worldIn, final BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ) {
         if(playerIn.isSneaking()) {
             if(getList().contains(worldIn.getBlockState(pos).getBlock())) {
                 if(!worldIn.isRemote) {
                     if(CheatCheck.isCheatAllowed(playerIn)) {
-                        Minecraft.getMinecraft().thePlayer.sendChatMessage("/playsound random.anvil_use " + playerIn.getName() + " " + playerIn.posX + " " + playerIn.posY + " " + playerIn.posZ + " 50 1");
-                        final String originalBlock = worldIn.getBlockState(pos).getBlock().getUnlocalizedName().substring(5);
-                        Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + pos.getY() + " " + pos.getZ() + " minecraft:bedrock");
-                        Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + pos.getY() + " " + pos.getZ() + " japdahan:" + originalBlock);
+                        worldIn.playSoundEffect(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, "random.anvil_use", 1.0F, 1.0F);
+                        final IBlockState originalBlock = worldIn.getBlockState(pos);
+                        worldIn.setBlockState(pos, Blocks.bedrock.getDefaultState(), 2);
+                        new Thread()
+                        {
+                            @Override
+                            public void run()
+                            {
+                                //some code here.
+                                try {
+                                    Thread.sleep(500);
+                                } catch (InterruptedException e) {
+                                    throw new RuntimeException(e);
+                                }
+                                worldIn.setBlockState(pos, originalBlock, 3);
+                            }
+                        }.start();
                     } else {
                         LogHelper.debug("Player is not OPed");
                         Minecraft.getMinecraft().thePlayer.sendChatMessage("/tellraw @p {\"text\":\"You MUST enable cheats to do this action!\",\"color\":\"red\"}");

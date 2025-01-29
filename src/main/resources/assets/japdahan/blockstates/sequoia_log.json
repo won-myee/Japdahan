@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "axis=y":  { "model": "japdahan:sequoia_log" },
+    "axis=z":   { "model": "japdahan:sequoia_log_side" },
+    "axis=x":   { "model": "japdahan:sequoia_log_side", "y": 90 },
+    "axis=none": { "model": "japdahan:sequoia_bark" }
+  }
+}

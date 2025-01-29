@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "japdahan:sycamore_half_slab" },
+        "half=top": { "model": "japdahan:sycamore_upper_slab" }
+    }
+}

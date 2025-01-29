@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "axis=y":  { "model": "japdahan:white_cedar_log" },
+    "axis=z":   { "model": "japdahan:white_cedar_log_side" },
+    "axis=x":   { "model": "japdahan:white_cedar_log_side", "y": 90 },
+    "axis=none": { "model": "japdahan:white_cedar_bark" }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "axis=y":  { "model": "japdahan:warped_log" },
+    "axis=z":   { "model": "japdahan:warped_log_side" },
+    "axis=x":   { "model": "japdahan:warped_log_side", "y": 90 },
+    "axis=none": { "model": "japdahan:warped_bark" }
+  }
+}

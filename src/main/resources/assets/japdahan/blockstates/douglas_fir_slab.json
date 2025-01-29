@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "japdahan:douglas_fir_half_slab" },
+        "half=top": { "model": "japdahan:douglas_fir_upper_slab" }
+    }
+}

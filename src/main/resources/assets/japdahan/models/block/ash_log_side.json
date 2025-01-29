@@ -1,0 +1,7 @@
+{
+    "parent": "block/column_side",
+    "textures": {
+        "end": "japdahan:blocks/ash_log_top",
+        "side": "japdahan:blocks/ash_log"
+    }
+}

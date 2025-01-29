@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "japdahan:kapok_half_slab" },
+        "half=top": { "model": "japdahan:kapok_upper_slab" }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "stage=0": { "model": "japdahan:willow_sapling" },
+        "stage=1": { "model": "japdahan:willow_sapling" }
+    }
+}

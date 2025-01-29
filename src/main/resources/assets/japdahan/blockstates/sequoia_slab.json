@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "japdahan:sequoia_half_slab" },
+        "half=top": { "model": "japdahan:sequoia_upper_slab" }
+    }
+}

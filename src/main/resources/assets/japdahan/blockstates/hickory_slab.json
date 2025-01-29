@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "japdahan:hickory_half_slab" },
+        "half=top": { "model": "japdahan:hickory_upper_slab" }
+    }
+}

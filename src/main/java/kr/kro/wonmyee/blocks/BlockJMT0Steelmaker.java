@@ -2,6 +2,7 @@ package kr.kro.wonmyee.blocks;
 
 import kr.kro.wonmyee.Japdahan;
 import kr.kro.wonmyee.debug.LogHelper;
+import kr.kro.wonmyee.init.ModBlocks;
 import kr.kro.wonmyee.init.ModItems;
 import kr.kro.wonmyee.variables.CheatCheck;
 import net.minecraft.block.Block;
@@ -118,7 +119,7 @@ public class BlockJMT0Steelmaker extends Block {
                         }
                     } else if(playerIn.getHeldItem().getItem() == Items.flint_and_steel) {
                         if(mixtureCount.get(currentBlock) != 0) {
-                            Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + pos.getY() + " " + pos.getZ() + " japdahan:jmt0_steelmaker_lit");
+                            worldIn.setBlockState(pos, ModBlocks.JMT0_steelmaker_lit.getDefaultState(), 3);
                             Minecraft.getMinecraft().thePlayer.sendChatMessage("/playsound item.fireCharge.use " + playerIn.getName() + " " + playerIn.posX + " " + playerIn.posY + " " + playerIn.posZ + " 50 1");
                             new Thread()
                             {
@@ -132,7 +133,7 @@ public class BlockJMT0Steelmaker extends Block {
                                         throw new RuntimeException(e);
                                     }
                                     worldIn.spawnEntityInWorld(new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ModItems.steel_ingot, mixtureCount.get(currentBlock))));
-                                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/setblock " + pos.getX() + " " + pos.getY() + " " + pos.getZ() + " japdahan:jmt0_steelmaker");
+                                    worldIn.setBlockState(pos, ModBlocks.JMT0_steelmaker.getDefaultState(), 3);
                                     mixtureCount.set(currentBlock, 0);
                                 }
                             }.start();

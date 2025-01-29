@@ -1,0 +1,8 @@
+{
+    "parent": "block/half_slab",
+    "textures": {
+        "bottom": "japdahan:blocks/kapok_planks",
+        "top": "japdahan:blocks/kapok_planks",
+        "side": "japdahan:blocks/kapok_planks"
+    }
+}

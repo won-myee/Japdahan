@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "japdahan:ash_half_slab" },
+        "half=top": { "model": "japdahan:ash_upper_slab" }
+    }
+}

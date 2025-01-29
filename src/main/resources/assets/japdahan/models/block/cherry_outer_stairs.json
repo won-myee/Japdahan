@@ -1,0 +1,8 @@
+{
+    "parent": "block/outer_stairs",
+    "textures": {
+        "bottom": "japdahan:blocks/cherry_planks",
+        "top": "japdahan:blocks/cherry_planks",
+        "side": "japdahan:blocks/cherry_planks"
+    }
+}

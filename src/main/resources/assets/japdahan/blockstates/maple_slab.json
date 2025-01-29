@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "japdahan:maple_half_slab" },
+        "half=top": { "model": "japdahan:maple_upper_slab" }
+    }
+}

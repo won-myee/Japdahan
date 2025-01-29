@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "japdahan:mangrove_half_slab" },
+        "half=top": { "model": "japdahan:mangrove_upper_slab" }
+    }
+}

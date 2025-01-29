@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "japdahan:warped_half_slab" },
+        "half=top": { "model": "japdahan:warped_upper_slab" }
+    }
+}

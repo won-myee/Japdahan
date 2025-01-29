@@ -1,0 +1,7 @@
+{
+    "parent": "block/column_side",
+    "textures": {
+        "end": "japdahan:blocks/pale_oak_log_top",
+        "side": "japdahan:blocks/pale_oak_log"
+    }
+}
