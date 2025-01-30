@@ -7,8 +7,8 @@
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["won-myee"],
-  "credits": "All credits to me!",
+  "authorList": ["won-myee", "Bioxx"],
+  "credits": "Code: me, Google and ChatGPT Texture: me and Bioxx(Wood textures from TerraFirmaCraft",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
