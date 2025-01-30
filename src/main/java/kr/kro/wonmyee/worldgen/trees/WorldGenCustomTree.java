@@ -1,5 +1,6 @@
 package kr.kro.wonmyee.worldgen.trees;
 
+import net.minecraft.block.BlockLog;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
@@ -8,6 +9,8 @@ import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
 import java.util.Random;
 
+import static kr.kro.wonmyee.blocks.BlockModLog.LOG_AXIS;
+
 public class WorldGenCustomTree extends WorldGenAbstractTree {
     private final IBlockState log;   // Custom log block
     private final IBlockState leaves; // Custom leaves block
@@ -15,7 +18,7 @@ public class WorldGenCustomTree extends WorldGenAbstractTree {
 
     public WorldGenCustomTree(IBlockState log, IBlockState leaves, int minHeight) {
         super(true);
-        this.log = log;
+        this.log = log.withProperty(LOG_AXIS, BlockLog.EnumAxis.Y);
         this.leaves = leaves;
         this.minTreeHeight = minHeight;
     }

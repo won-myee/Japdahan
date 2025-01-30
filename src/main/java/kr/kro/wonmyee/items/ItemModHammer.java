@@ -25,8 +25,8 @@ import java.util.Set;
 
 public class ItemModHammer extends ItemTool {
 
-    public ItemModHammer(ToolMaterial material, String unlocalizedName, int maxDamage) {
-        super(material.getDamageVsEntity(), material, Sets.newHashSet(new Block[]{ModBlocks.bronze_casing, ModBlocks.iron_casing, ModBlocks.steel_casing}));
+    public ItemModHammer(ToolMaterial material, String unlocalizedName, int maxDamage, float damageVsEntity) {
+        super(damageVsEntity, material, Sets.newHashSet(new Block[]{ModBlocks.bronze_casing, ModBlocks.iron_casing, ModBlocks.steel_casing}));
         this.setUnlocalizedName(unlocalizedName);
         this.setCreativeTab(Japdahan.items);
         this.setMaxStackSize(1);

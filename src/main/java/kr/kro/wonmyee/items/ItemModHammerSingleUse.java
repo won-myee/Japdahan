@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class ItemModHammerSingleUse extends ItemTool {
 
     public ItemModHammerSingleUse(ToolMaterial material, String unlocalizedName) {
-        super(material.getDamageVsEntity(), material, Sets.newHashSet(new Block[]{ModBlocks.bronze_casing, ModBlocks.iron_casing, ModBlocks.steel_casing}));
+        super(1.0F, material, Sets.newHashSet(new Block[]{ModBlocks.bronze_casing, ModBlocks.iron_casing, ModBlocks.steel_casing}));
         this.setUnlocalizedName(unlocalizedName);
         this.setCreativeTab(Japdahan.items);
         this.setMaxStackSize(1);

@@ -1,9 +1,7 @@
 package kr.kro.wonmyee.blocks;
 
 import kr.kro.wonmyee.Japdahan;
-import net.minecraft.block.BlockLog;
 import net.minecraft.block.BlockStairs;
-import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.IBlockState;

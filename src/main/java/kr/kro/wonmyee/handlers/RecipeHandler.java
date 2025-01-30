@@ -56,6 +56,26 @@ public class RecipeHandler {
         registerMaterialRecipe("Potassium", ModItems.potassium_ingot, ModBlocks.potassium_block, ModItems.potassium_plate, ModItems.potassium_dust, ModItems.potassium_rod, ModItems.potassium_rodlong, ModItems.potassium_gear, ModItems.potassium_ring);
         registerMaterialRecipe("Calcium", ModItems.calcium_ingot, ModBlocks.calcium_block, ModItems.calcium_plate, ModItems.calcium_dust, ModItems.calcium_rod, ModItems.calcium_rodlong, ModItems.calcium_gear, ModItems.calcium_ring);
 
+        registerWoodRecipe(ModBlocks.mangrove_log, ModBlocks.mangrove_planks, ModBlocks.mangrove_stairs, ModBlocks.mangrove_slab, ModBlocks.mangrove_sapling);
+        registerWoodRecipe(ModBlocks.cherry_log, ModBlocks.cherry_planks, ModBlocks.cherry_stairs, ModBlocks.cherry_slab, ModBlocks.cherry_sapling);
+        registerWoodRecipe(ModBlocks.pale_oak_log, ModBlocks.pale_oak_planks, ModBlocks.pale_oak_stairs, ModBlocks.pale_oak_slab, ModBlocks.pale_oak_sapling);
+        registerWoodRecipe(ModBlocks.bamboo_log, ModBlocks.bamboo_planks, ModBlocks.bamboo_stairs, ModBlocks.bamboo_slab, ModBlocks.bamboo_sapling);
+        registerWoodRecipe(ModBlocks.crimson_log, ModBlocks.crimson_planks, ModBlocks.crimson_stairs, ModBlocks.crimson_slab, ModBlocks.crimson_sapling);
+        registerWoodRecipe(ModBlocks.warped_log, ModBlocks.warped_planks, ModBlocks.warped_stairs, ModBlocks.warped_slab, ModBlocks.warped_sapling);
+        registerWoodRecipe(ModBlocks.ash_log, ModBlocks.ash_planks, ModBlocks.ash_stairs, ModBlocks.ash_slab, ModBlocks.ash_sapling);
+        registerWoodRecipe(ModBlocks.aspen_log, ModBlocks.aspen_planks, ModBlocks.aspen_stairs, ModBlocks.aspen_slab, ModBlocks.aspen_sapling);
+        registerWoodRecipe(ModBlocks.chestnut_log, ModBlocks.chestnut_planks, ModBlocks.chestnut_stairs, ModBlocks.chestnut_slab, ModBlocks.chestnut_sapling);
+        registerWoodRecipe(ModBlocks.douglas_fir_log, ModBlocks.douglas_fir_planks, ModBlocks.douglas_fir_stairs, ModBlocks.douglas_fir_slab, ModBlocks.douglas_fir_sapling);
+        registerWoodRecipe(ModBlocks.hickory_log, ModBlocks.hickory_planks, ModBlocks.hickory_stairs, ModBlocks.hickory_slab, ModBlocks.hickory_sapling);
+        registerWoodRecipe(ModBlocks.kapok_log, ModBlocks.kapok_planks, ModBlocks.kapok_stairs, ModBlocks.kapok_slab, ModBlocks.kapok_sapling);
+        registerWoodRecipe(ModBlocks.maple_log, ModBlocks.maple_planks, ModBlocks.maple_stairs, ModBlocks.maple_slab, ModBlocks.maple_sapling);
+        registerWoodRecipe(ModBlocks.pine_log, ModBlocks.pine_planks, ModBlocks.pine_stairs, ModBlocks.pine_slab, ModBlocks.pine_sapling);
+        registerWoodRecipe(ModBlocks.sequoia_log, ModBlocks.sequoia_planks, ModBlocks.sequoia_stairs, ModBlocks.sequoia_slab, ModBlocks.sequoia_sapling);
+        registerWoodRecipe(ModBlocks.sycamore_log, ModBlocks.sycamore_planks, ModBlocks.sycamore_stairs, ModBlocks.sycamore_slab, ModBlocks.sycamore_sapling);
+        registerWoodRecipe(ModBlocks.white_cedar_log, ModBlocks.white_cedar_planks, ModBlocks.white_cedar_stairs, ModBlocks.white_cedar_slab, ModBlocks.white_cedar_sapling);
+        registerWoodRecipe(ModBlocks.white_elm_log, ModBlocks.white_elm_planks, ModBlocks.white_elm_stairs, ModBlocks.white_elm_slab, ModBlocks.white_elm_sapling);
+        registerWoodRecipe(ModBlocks.willow_log, ModBlocks.willow_planks, ModBlocks.willow_stairs, ModBlocks.willow_slab, ModBlocks.willow_sapling);
+
         registerToolRecipe(ModItems.copper_pickaxe, ModItems.copper_hoe, ModItems.copper_axe, ModItems.copper_shovel, ModItems.copper_sword, ModItems.copper_ingot);
         registerToolRecipe(ModItems.bronze_pickaxe, ModItems.bronze_hoe, ModItems.bronze_axe, ModItems.bronze_shovel, ModItems.bronze_sword, ModItems.bronze_ingot);
         registerToolRecipe(ModItems.steel_pickaxe, ModItems.steel_hoe, ModItems.steel_axe, ModItems.steel_shovel, ModItems.steel_sword, ModItems.steel_ingot);
@@ -120,7 +140,7 @@ public class RecipeHandler {
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(gear), new Object[]{"gear"+materialName}));
 
         GameRegistry.addRecipe(new ItemStack(storageBlock), new Object[]{"III", "III", "III", 'I', ingot});
-        GameRegistry.addShapelessRecipe(new ItemStack(ingot, 9, 0), new Object[]{Item.getItemFromBlock(storageBlock)});
+        GameRegistry.addShapelessRecipe(new ItemStack(ingot, 9), new Object[]{Item.getItemFromBlock(storageBlock)});
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(plate), new Object[]{" H "," I "," I ",'H',"hammer",'I',ingot}));
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(dust), new Object[]{"hammer",ingot}));
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(rod), new Object[]{"file",ingot}));
@@ -129,6 +149,17 @@ public class RecipeHandler {
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ring), new Object[]{"hammer",rod}));
 
         GameRegistry.addSmelting(dust, new ItemStack(ingot), 0);
+    }
+
+    public static void registerWoodRecipe(Block log, Block planks, Block stairs, Block slab, Block sapling) {
+        OreDictionary.registerOre("logWood", log);
+        OreDictionary.registerOre("plankWood", planks);
+        OreDictionary.registerOre("stairWood", stairs);
+        OreDictionary.registerOre("slabWood", slab);
+        OreDictionary.registerOre("treeSapling", sapling);
+        GameRegistry.addShapelessRecipe(new ItemStack(planks, 4), new Object[]{Item.getItemFromBlock(log)});
+        GameRegistry.addRecipe(new ItemStack(stairs, 4), new Object[]{"W  ","WW ","WWW",'W',planks});
+        GameRegistry.addRecipe(new ItemStack(slab, 6), new Object[]{"WWW",'W',planks});
     }
 
     public static void registerToolRecipe(Item pickaxe, Item hoe, Item axe, Item shovel, Item sword, Item ingot) {

@@ -20,8 +20,8 @@ import java.util.Set;
 
 public class ItemModWrench extends ItemTool {
 
-    public ItemModWrench(ToolMaterial material, String unlocalizedName, int maxDamage) {
-        super(material.getDamageVsEntity(), material, Sets.newHashSet(new Block[]{ModBlocks.bronze_casing, ModBlocks.iron_casing, ModBlocks.steel_casing}));
+    public ItemModWrench(ToolMaterial material, String unlocalizedName, int maxDamage, float damageVsEntity) {
+        super(damageVsEntity, material, Sets.newHashSet(new Block[]{ModBlocks.bronze_casing, ModBlocks.iron_casing, ModBlocks.steel_casing}));
         this.setUnlocalizedName(unlocalizedName);
         this.setCreativeTab(Japdahan.items);
         this.setMaxStackSize(1);

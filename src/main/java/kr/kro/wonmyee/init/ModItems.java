@@ -289,14 +289,14 @@ public class ModItems {
     public static void init() {
         //Hammer and Wrench
         stone_hammer = new ItemModHammerSingleUse(Item.ToolMaterial.STONE, "stone_hammer");
-        copper_hammer = new ItemModHammer(copperMaterial, "copper_hammer", 64);
-        bronze_hammer = new ItemModHammer(bronzeMaterial, "bronze_hammer", 96);
-        iron_hammer = new ItemModHammer(Item.ToolMaterial.IRON, "iron_hammer", 128);
-        steel_hammer = new ItemModHammer(steelMaterial, "steel_hammer", 192);
-        copper_wrench = new ItemModWrench(copperMaterial, "copper_wrench", 64);
-        bronze_wrench = new ItemModWrench(bronzeMaterial, "bronze_wrench", 96);
-        iron_wrench = new ItemModWrench(Item.ToolMaterial.IRON, "iron_wrench", 128);
-        steel_wrench = new ItemModWrench(steelMaterial, "steel_wrench", 192);
+        copper_hammer = new ItemModHammer(copperMaterial, "copper_hammer", 64, 1.3F);
+        bronze_hammer = new ItemModHammer(bronzeMaterial, "bronze_hammer", 96, 1.8F);
+        iron_hammer = new ItemModHammer(Item.ToolMaterial.IRON, "iron_hammer", 128, 2.0F);
+        steel_hammer = new ItemModHammer(steelMaterial, "steel_hammer", 192, 2.5F);
+        copper_wrench = new ItemModWrench(copperMaterial, "copper_wrench", 64, 1.3F);
+        bronze_wrench = new ItemModWrench(bronzeMaterial, "bronze_wrench", 96, 1.8F);
+        iron_wrench = new ItemModWrench(Item.ToolMaterial.IRON, "iron_wrench", 128, 2.0F);
+        steel_wrench = new ItemModWrench(steelMaterial, "steel_wrench", 192, 2.5F);
         copper_file = new ItemModCraftingTools("copper_file", 64);
         bronze_file = new ItemModCraftingTools("bronze_file", 96);
         iron_file = new ItemModCraftingTools("iron_file", 128);

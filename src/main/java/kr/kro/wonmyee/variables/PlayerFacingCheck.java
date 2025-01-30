@@ -1,7 +1,6 @@
 package kr.kro.wonmyee.variables;
 
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumFacing;
 
 public class PlayerFacingCheck {
