@@ -106,6 +106,30 @@ public class BlockModSapling extends BlockBush implements IGrowable {
         return blockArrayList;
     }
 
+    public ArrayList<Integer> getHeight() {
+        ArrayList<Integer> integerArrayList = new ArrayList<Integer>();
+        integerArrayList.add(7);
+        integerArrayList.add(5);
+        integerArrayList.add(6);
+        integerArrayList.add(7);
+        integerArrayList.add(4);
+        integerArrayList.add(4);
+        integerArrayList.add(4);
+        integerArrayList.add(5);
+        integerArrayList.add(5);
+        integerArrayList.add(7);
+        integerArrayList.add(3);
+        integerArrayList.add(5);
+        integerArrayList.add(5);
+        integerArrayList.add(6);
+        integerArrayList.add(9);
+        integerArrayList.add(5);
+        integerArrayList.add(6);
+        integerArrayList.add(4);
+        integerArrayList.add(7);
+        return integerArrayList;
+    }
+
     @Override
     public void grow(World world, Random rand, BlockPos pos, IBlockState state) {
         if (!world.isRemote) {
@@ -128,7 +152,7 @@ public class BlockModSapling extends BlockBush implements IGrowable {
         new WorldGenCustomTree(
                 getLogList().get(type).getDefaultState(),
                 Blocks.leaves.getDefaultState(),
-                5 // Min height
+                getHeight().get(type) // Min height
         ).generate(world, rand, pos);
     }
 }

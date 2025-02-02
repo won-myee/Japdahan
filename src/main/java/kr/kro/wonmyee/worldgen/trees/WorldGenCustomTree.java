@@ -28,10 +28,17 @@ public class WorldGenCustomTree extends WorldGenAbstractTree {
         int height = rand.nextInt(3) + minTreeHeight; // Random height
 
         // ✅ Check if tree can generate (prevents floating trees)
-        for (int y = 0; y <= height + 1; y++) {
+        BlockPos basePos = pos.down(2); // Check the block directly beneath the base
+        if (world.getBlockState(basePos).getBlock() != Blocks.grass && world.getBlockState(basePos).getBlock() != Blocks.dirt) {
+            return false; // No solid block to support the tree
+        }
+
+        // Check the space above the base to ensure there’s enough room for the tree trunk
+        for (int y = 1; y <= height; y++) {
             BlockPos checkPos = pos.up(y);
-            if (!world.isAirBlock(checkPos) && world.getBlockState(checkPos).getBlock() != Blocks.grass) {
-                return false;
+
+            if (!world.isAirBlock(checkPos)) {
+                return false; // Block in the way of tree generation
             }
         }
 
